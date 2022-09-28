@@ -9,10 +9,10 @@ const crearChistesHtml = ()=>{
 
     const html = `
     
-    <h1 class="mt-5">Chistes</h1>
+    <h1 class="mt-5">Chistes de Chuck Norris</h1>
     <hr>
 
-    <button class="btn btn-primary">Otro Chiste</button>
+    <button class="btn btn-primary">Quieres Otro Chiste?</button>
 
     <ol class="mt-2 list-group">
 
@@ -89,8 +89,8 @@ export const dibujarChiste = async( chiste ) => {
 }
 
 
-export const init = () =>{
-
+export const init = async() =>{
+    dibujarChiste(await obtenerChiste());
     crearChistesHtml();
     eventos();
 };
