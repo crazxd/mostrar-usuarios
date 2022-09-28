@@ -25,6 +25,9 @@ const crearChistesHtml = ()=>{
 
     body.append(divChistes);
 
+    
+    
+
 }
 
 const eventos = () =>{
@@ -90,8 +93,26 @@ export const dibujarChiste = async( chiste ) => {
 
 
 export const init = async() =>{
-    dibujarChiste(await obtenerChiste());
+    
+    
     crearChistesHtml();
+    
+
+    
+
+   
     eventos();
+    
+    btnOtro.disabled = true;
+
+    dibujarChiste(await obtenerChiste());
+
+    setTimeout(() => {
+        btnOtro.disabled = false;
+    }, 2000);
+
+
+
+
 };
 
