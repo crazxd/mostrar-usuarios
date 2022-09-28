@@ -7,6 +7,8 @@ const crearHtml = () => {
     
     const html = `
     <h1 class="mt-5"> Usuarios</h1>
+    <hr>
+
 
     <table class="table">
         <thead>
